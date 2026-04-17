@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demirdar İnşaat — Güvenin Adresi. Kaliteli işçilik, sarsılmaz temeller, gerçekçi yaşam alanları.">
+  <title>Demirdar İnşaat — Güvenin Adresi</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FIXED VIDEO BACKGROUND -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="video-container" class="video-bg">
+    <video id="scroll-video" class="video-bg__video" muted playsinline preload="auto">
+      <source src="building-scroll.mp4" type="video/mp4">
+    </video>
+    <div id="video-overlay" class="video-bg__overlay"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- NAVIGATION -->
+  <!-- ═══════════════════════════════════════════ -->
+  <nav id="main-nav" class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">◆</span>
+        <span class="nav__logo-text">DEMİRDAR</span>
+        <span class="nav__logo-sub">İNŞAAT</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#hakkimizda">Hakkımızda</a></li>
+        <li><a href="#kalite">Kalite</a></li>
+        <li><a href="#projeler">Projeler</a></li>
+        <li><a href="#iletisim" class="nav__cta">İletişim</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- VIDEO SCROLL ZONE — This tall container    -->
+  <!-- drives the video playback via scroll        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="video-scroll-zone" class="video-scroll-zone">
+
+    <!-- SECTION 1: HERO — ROOFTOP / SKY VIEW -->
+    <section id="hero" class="section section--hero">
+      <div class="hero__content">
+        <div class="hero__badge reveal-up">
+          <span class="hero__badge-dot"></span>
+          <span>2008'den Bu Yana Güvenle İnşa Ediyoruz</span>
+        </div>
+        <h1 class="hero__title reveal-up">
+          <span class="hero__title-line">Güvenin</span>
+          <span class="hero__title-line hero__title-line--accent">Adresi</span>
+        </h1>
+        <p class="hero__subtitle reveal-up">
+          Sağlam temeller üzerine kurulan kaliteli yaşam alanları.
+          <br>Her projemiz, aileniz için güvenli bir gelecek vaadidir.
+        </p>
+        <div class="hero__scroll-indicator reveal-up">
+          <div class="hero__scroll-line"></div>
+          <span>Keşfet</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: BUILDING DESCENT — UPPER FLOORS -->
+    <section id="hakkimizda" class="section section--about">
+      <div class="about__content">
+        <div class="about__grid">
+          <div class="about__text">
+            <span class="section-label reveal-up">Hakkımızda</span>
+            <h2 class="section-title reveal-up">
+              İki Kurucu,<br><em>Tek Vizyon</em>
+            </h2>
+            <p class="section-desc reveal-up">
+              Demirdar İnşaat, iki ortağın ortak inancıyla doğdu: 
+              <strong>Her aile, sağlam ve güvenli bir yuvayı hak eder.</strong>
+              Büyük vaatler yerine, kaliteli işçilik ve dürüst iş anlayışıyla
+              bölgemizde güvenin adresi olduk.
+            </p>
+            <div class="about__stats reveal-up">
+              <div class="stat">
+                <span class="stat__number" data-count="18">0</span>
+                <span class="stat__label">Yıllık Deneyim</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number" data-count="24">0</span>
+                <span class="stat__label">Tamamlanan Proje</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number" data-count="850">0</span>
+                <span class="stat__label">Mutlu Aile</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__image-wrapper reveal-scale">
+            <div class="about__image">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" 
+                   alt="İnşaat sahası" loading="lazy">
+            </div>
+            <div class="about__image-accent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MID BUILDING — QUALITY / INTERIORS -->
+    <section id="kalite" class="section section--quality">
+      <div class="quality__content">
+        <div class="quality__header">
+          <span class="section-label reveal-up">Kalite Anlayışımız</span>
+          <h2 class="section-title section-title--light reveal-up">
+            Her Detayda<br><em>Mükemmellik</em>
+          </h2>
+          <p class="section-desc section-desc--light reveal-up">
+            Kullandığımız malzemelerden işçiliğimize kadar her adımda
+            kaliteyi ön planda tutuyoruz. Çünkü eviniz, hayatınızdır.
+          </p>
+        </div>
+
+        <div class="quality__cards">
+          <div class="quality__card reveal-up" style="--delay: 0s">
+            <div class="quality__card-icon">🏗️</div>
+            <h3>Depreme Dayanıklı Yapı</h3>
+            <p>Güncel yönetmeliklerin üzerinde, en yüksek güvenlik standartlarında betonarme sistemler kullanıyoruz.</p>
+          </div>
+          <div class="quality__card reveal-up" style="--delay: 0.1s">
+            <div class="quality__card-icon">🪵</div>
+            <h3>Birinci Sınıf Malzeme</h3>
+            <p>Parke, seramik, doğrama ve tesisattan asla ödün vermiyoruz. Markalarımız güveninizdir.</p>
+          </div>
+          <div class="quality__card reveal-up" style="--delay: 0.2s">
+            <div class="quality__card-icon">📐</div>
+            <h3>Titiz İşçilik</h3>
+            <p>Deneyimli ustalarımız her köşeyi milimetrik hassasiyetle işler. Detaylarda farkımızı görürsünüz.</p>
+          </div>
+          <div class="quality__card reveal-up" style="--delay: 0.3s">
+            <div class="quality__card-icon">🌿</div>
+            <h3>Yeşil Çevre Düzenlemesi</h3>
+            <p>Yaşam alanlarımızı doğayla bütünleşen peyzaj ve yeşil alanlarla tamamlıyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPACER to slow down video scroll massively -->
+    <div style="height: 150vh; width: 100%; pointer-events: none;"></div>
+
+  </div>
+  <!-- END VIDEO SCROLL ZONE -->
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 4: INTERIOR SHOWCASE -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section section--interiors">
+    <div class="interiors__content">
+      <div class="interiors__header">
+        <span class="section-label reveal-up">Yaşam Alanları</span>
+        <h2 class="section-title reveal-up">
+          Eviniz,<br><em>Hayalleriniz</em>
+        </h2>
+      </div>
+
+      <div class="interiors__gallery">
+        <div class="interiors__item interiors__item--large reveal-up">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=80" 
+               alt="Modern salon" loading="lazy">
+          <div class="interiors__item-label">Ferah Salonlar</div>
+        </div>
+        <div class="interiors__item reveal-up" style="--delay: 0.1s">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" 
+               alt="Modern mutfak" loading="lazy">
+          <div class="interiors__item-label">Modern Mutfaklar</div>
+        </div>
+        <div class="interiors__item reveal-up" style="--delay: 0.2s">
+          <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" 
+               alt="Yatak odası" loading="lazy">
+          <div class="interiors__item-label">Huzurlu Odalar</div>
+        </div>
+        <div class="interiors__item reveal-up" style="--delay: 0.3s">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" 
+               alt="Banyo" loading="lazy">
+          <div class="interiors__item-label">Şık Banyolar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 5: PROJECTS GALLERY — GROUND LEVEL -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="projeler" class="section section--projects">
+    <div class="projects__bg" data-speed="0.1"></div>
+    <div class="projects__overlay"></div>
+
+    <div class="projects__content">
+      <span class="section-label section-label--light reveal-up">Projelerimiz</span>
+      <h2 class="section-title section-title--light reveal-up">
+        Tamamlanan<br><em>Eserlerimiz</em>
+      </h2>
+
+      <div class="projects__grid">
+        <div class="projects__card reveal-up" style="--delay: 0s">
+          <div class="projects__card-image">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80" 
+                 alt="Demirdar Konutları" loading="lazy">
+            <div class="projects__card-tag">Tamamlandı — 2024</div>
+          </div>
+          <div class="projects__card-info">
+            <h3>Demirdar Konutları</h3>
+            <p>5 Katlı • 20 Daire • Merkezi Konum</p>
+          </div>
+        </div>
+        <div class="projects__card reveal-up" style="--delay: 0.15s">
+          <div class="projects__card-image">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&q=80" 
+                 alt="Yeşilvadi Sitesi" loading="lazy">
+            <div class="projects__card-tag">Tamamlandı — 2022</div>
+          </div>
+          <div class="projects__card-info">
+            <h3>Yeşilvadi Sitesi</h3>
+            <p>3 Blok • 48 Daire • Site İçi Otopark</p>
+          </div>
+        </div>
+        <div class="projects__card reveal-up" style="--delay: 0.3s">
+          <div class="projects__card-image">
+            <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=700&q=80" 
+                 alt="Park Evleri" loading="lazy">
+            <div class="projects__card-tag">Tamamlandı — 2020</div>
+          </div>
+          <div class="projects__card-info">
+            <h3>Park Evleri</h3>
+            <p>8 Katlı • 32 Daire • Çocuk Parkı</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 6: FOUNDATION — TRUST MESSAGE -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section section--foundation">
+    <div class="foundation__content">
+      <div class="foundation__icon reveal-scale">◆</div>
+      <h2 class="foundation__title reveal-up">
+        Sarsılmaz Temeller,<br>
+        <em>Güvenli Gelecek</em>
+      </h2>
+      <p class="foundation__desc reveal-up">
+        Her projemizin temelinde kalite, her katında güven,<br>
+        her dairesinde sıcak bir yuva vardır.
+      </p>
+      <div class="foundation__line reveal-up"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 7: CONTACT / CTA -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="iletisim" class="section section--contact">
+    <div class="contact__content">
+      <span class="section-label reveal-up">İletişim</span>
+      <h2 class="section-title reveal-up">
+        Hayalinizdeki Eve<br><em>Bir Adım Kaldı</em>
+      </h2>
+      <p class="section-desc reveal-up">
+        Projelerimiz hakkında detaylı bilgi almak ve
+        yeni yatırım fırsatlarını keşfetmek için bizimle iletişime geçin.
+      </p>
+
+      <div class="contact__grid reveal-up">
+        <div class="contact__info-card">
+          <div class="contact__info-icon">📍</div>
+          <h4>Adres</h4>
+          <p>Atatürk Caddesi No: 42<br>Merkez / Giresun</p>
+        </div>
+        <div class="contact__info-card">
+          <div class="contact__info-icon">📞</div>
+          <h4>Telefon</h4>
+          <p>+90 (454) 212 XX XX</p>
+        </div>
+        <div class="contact__info-card">
+          <div class="contact__info-icon">✉️</div>
+          <h4>E-Posta</h4>
+          <p>info@demirdarinsaat.com</p>
+        </div>
+      </div>
+
+      <a href="#" id="cta-button" class="contact__cta reveal-up">
+        Bize Ulaşın
+        <span class="contact__cta-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo-icon">◆</span>
+        <span class="footer__logo-text">DEMİRDAR İNŞAAT</span>
+      </div>
+      <p class="footer__copy">© 2026 Demirdar İnşaat. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SCROLL PROGRESS BAR -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
